@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Max's Weather</title>
+</head>
+<body>
+    <header class="col-12 col-lg-12">
+        <h1>Weather Dashboard</h1>
+        <h2 id="currentDay"></h2>
+    </header>
+    <div class="col-12 col-lg-4 searchArea wireframe">
+        <form>
+            <div>
+                <label for="citySearchBar" class="form-label">Search for City: </label>
+                <input type= "city" class="form-control" id="inputCity" placeholder="Enter City">
+            </div>
+            <button type="submit" class="btn btn-primary" id="searchBtn">Search</button>
+        </form>
+    </div>
+    <div class="col-12 col-lg-8 currentData wireframe">
+        <h1 id="city"></h1>
+        <img id="currentDayIcon" alt="">
+        <h2 id= "temp"></h2>
+        <h2 id= "wind"></h2>
+        <h2 id= "humid"></h2>
+        <h2 id= "uv"></h2>
+    </div>
+<!--Five Day Forecast-->
+
+
+</body>
+</html>
