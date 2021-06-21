@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <title>Weather Dashboard</title>
 </head>
 <body>
-    <header class="col-12 col-lg-12">
+    <header>
         <h1>Weather Dashboard</h1>
         <h2 id="currentDay"></h2>
     </header>
@@ -32,19 +32,28 @@
         <h2 id= "uv"></h2>
     </div>
 <!--Five Day Forecast-->
-    <div class="col-12 col-lg-8 currentData wireframe">
+    <div class="col-12 col-lg-8 currentData wireframe2">
       <h1>5-day Forecast</h1>
         <div id='day1' class="col-12 col-lg-2 block">
+            <h1 id= "date1"></h1>
             <img id="icon1" alt="icon">
-            <h2 id="temp1"></h2>
-            <h2 id="wind1"></h2>
-            <h2 id="humid1"></h2>
-            <h2 id="uv1"></h2>
+            <h3 id="temp1"></h3>
+            <h3 id="wind1"></h3>
+            <h3 id="humid1"></h3>
+        </div>
+        <div id='day2' class="col-12 col-lg-2 block">
+            <h1 id= "date2"></h1>
+            <img id="icon2" alt="icon">
+            <h3 id="temp2"></h3>
+            <h3 id="wind2"></h3>
+            <h3 id="humid2"></h3>
         </div>
 
     </div>
-
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
