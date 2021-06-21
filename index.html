@@ -17,7 +17,7 @@
     <div class="col-12 col-lg-4 searchArea wireframe">
         <form>
             <div>
-                <label for="citySearchBar" class="form-label">Search for a City: </label>
+                <label for="citySearch" class="form-label">Search for a City: </label>
                 <input type= "city" class="form-control" id="enterCity" placeholder="Enter City">
             </div>
             <button type="submit" class="btn btn-primary" id="searchBtn">Search</button>
@@ -25,13 +25,25 @@
     </div>
     <div class="col-12 col-lg-8 currentData wireframe">
         <h1 id="city"></h1>
-        <img id="currentDayIcon" alt="">
+        <img id="currentIcon" alt="">
         <h2 id= "temp"></h2>
         <h2 id= "wind"></h2>
         <h2 id= "humid"></h2>
         <h2 id= "uv"></h2>
     </div>
 <!--Five Day Forecast-->
+    <div class="col-12 col-lg-8 currentData wireframe">
+      <h1>5-day Forecast</h1>
+        <div id='day1' class="col-12 col-lg-2 block">
+            <img id="icon1" alt="icon">
+            <h2 id="temp1"></h2>
+            <h2 id="wind1"></h2>
+            <h2 id="humid1"></h2>
+            <h2 id="uv1"></h2>
+        </div>
+
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
