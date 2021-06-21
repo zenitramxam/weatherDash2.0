@@ -1,5 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
 header {
     text-align: center;
     background-color: #0011ff;
     color: white;
+}
+
+.searchArea {
+    justify-content: center;
+    margin-bottom: auto;
+}
+
+.currentInfo {
+    justify-content: center;
+}
+
+#newBut {
+    background-color: #0011ff;
+    color: white;
+    display: flex;
+    margin-bottom: 3%;
+    margin-left: 3%;
+    height: 30px;
+    width: 25%;
+    border-radius: 4px;
+    text-align: center;
+}
+
+#fiveday {
+    column-count: 5;
+    justify-content: space-evenly;
+}
+
+.block {
+    padding: 15px;
+    width: fit-content;
 }

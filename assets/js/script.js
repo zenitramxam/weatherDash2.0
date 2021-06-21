@@ -10,14 +10,17 @@ const uv= $('#uv');
 $(searchBut).on('click', function (event) {
     event.preventDefault();
     var searchedCity= $('#enterCity').val().trim();
+    localStorage.setItem('city', searchedCity)
+    var storeCity= localStorage.getItem('city');
+    var butt = document.createElement('button');
+    butt.innerHTML = storeCity
+    butt.setAttribute('id', 'newBut')
+    document.getElementById('past').appendChild(butt);
     var geoAPI= 'https://api.openweathermap.org/geo/1.0/direct?q=' + searchedCity + '&appid=e16523d04c63d1ae7214ce72c3259465';
     fetch(geoAPI)
         .then(response => response.json())
         .then(function (data) {
             console.log(data);
-
-            localStorage.setItem('city', JSON.stringify(searchedCity));
-
             var long = data[0].lon;
             var lat = data[0].lat;
             var WeatherAPI = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + long + '&units=imperial&exclude=hourly,minutely&appid=' + APIKey;
@@ -48,9 +51,8 @@ $(searchBut).on('click', function (event) {
                 })
         })
 });
-/*
-$(searchBut).on('click', function(event) {
-    event.preventDefault();
-      var createButton = document
+
+
+$('#past').on("click", function() {
+    alert("this action has not yet been completed")
 })
-*/
