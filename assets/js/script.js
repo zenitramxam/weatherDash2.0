@@ -37,15 +37,15 @@ $(searchBut).on('click', function (event) {
                     $(humid).text('Humidity: ' + data.current.humidity + '%');
 
                 for(i = 1; i < 6; i++) {
-                  icon[i]= document.getElementById('icon' + i);
+                  icon[i]= $('#icon' + i);
                     $(icon[i]).attr("src", 'https://openweathermap.org/img/wn/' + data.daily[i].weather[0].icon + '@2x.png');
-                  temp[i]= document.getElementById('temp' + i);
+                  temp[i]= $('#temp' + i);
                     $(temp[i]).text('Temp: ' + data.daily[i].temp.day + '\u00B0' + 'F');
-                  wind[i]= document.getElementById('wind' + i);
+                  wind[i]= $('#wind' + i);
                     $(wind[i]).text('Wind: ' + data.daily[i].wind_speed + 'MPH');
-                  humid[i]= document.getElementById('humid' + i)
+                  humid[i]= $('#humid' + i)
                     $(humid[i]).text('Humidity: ' + data.daily[i].humidity + '%');
-                  var date= document.getElementById('date' + i);
+                  var date= $('#date' + i);
                   $(date).text(moment().add(i, 'days').format('l'));
                 }
                 })
