@@ -4,18 +4,22 @@
     border: 0;
 }
 
-header {
-    text-align: center;
-    background-color: #0011ff;
-    color: white;
+.body {
+    background-color:#b4ceff;
 }
 
-.searchArea {
+header {
+    text-align: center;
+    background-color: #ffff56;
+    color: #494949;
+}
+
+.area {
     justify-content: center;
     margin-bottom: auto;
 }
 
-.currentInfo {
+.info {
     justify-content: center;
 }
 
