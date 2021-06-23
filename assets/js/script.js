@@ -6,16 +6,56 @@ const temp= $('#temp');
 const wind= $('#wind');
 const humid= $('#humid');
 const uv= $('#uv');
+//var searchedCity= $('#enterCity');
+/*
+var cities= [];
+cities.push(JSON.parse(localStorage.getItem('previous')));
+localStorage.setItem("previous", JSON.stringify(cities));
+//cityhiss();
+/*
+renderCities();
+/*
+function renderCities() {
+  var lastCity= JSON.parse(localStorage.getItem("cities"));
+  if (lastCity !== null) {
+    console.log(cities)
+  }
+}
+/*
+var preCities= localStorage.getItem("city");
+console.log(preCities)
+localStorage.setItem("cities2", JSON.stringify())
+*/
+var searchedCity= $('#enterCity').val().trim();
+
 
 $(searchBut).on('click', function (event) {
     event.preventDefault();
     var searchedCity= $('#enterCity').val().trim();
-    localStorage.setItem('city', searchedCity)
-    var storeCity= localStorage.getItem('city');
+    let citiesArr= [];
+    let cities= {searchedCity};
+    
+    if(!localStorage.getItem('Previous')) {
+      citiesArr.push(cities);
+      localStorage.setItem('Previous', JSON.stringify(citiesArr));
+      JSON.parse(localStorage.getItem('Previous'));
+      
+    } else {
+      citiesArr = JSON.parse(localStorage.getItem('Previous'));
+      citiesArr.push(cities);
+      localStorage.setItem('Previous', JSON.stringify(citiesArr));
+      JSON.parse(localStorage.getItem("Previous"));
+      
+    }
+    /*
+    localStorage.setItem('cities', JSON.stringify(searchedCity))
+  
+    var storeCity= localStorage.getItem('cities');
     var butt = document.createElement('button');
     butt.innerHTML = storeCity
     butt.setAttribute('id', 'newBut')
     document.getElementById("areaa").appendChild(butt);
+    */
     var geoAPI= 'https://api.openweathermap.org/geo/1.0/direct?q=' + searchedCity + '&appid=e16523d04c63d1ae7214ce72c3259465';
     fetch(geoAPI)
         .then(response => response.json())
